@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MascotasLike">
+
+    <include
+        android:id="@+id/layout_actionBar"
+        layout="@layout/app_actionbar">
+    </include>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layRecycler_mascotasLikeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/recyclerview_mascotaslist_verticalmargin">
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/layRecycler_txv_emptymessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/recyclerView_txv_empty"
+        android:textColor="@color/fondoOscuro"
+        android:textSize="@dimen/cardview_txvSize_description"
+        android:layout_margin="20dp"
+        />
+
+</android.support.v7.widget.LinearLayoutCompat>

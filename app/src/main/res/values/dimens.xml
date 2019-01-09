@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="cardview_image_heightSize">300dp</dimen>
+    <dimen name="cardview_verticalmargin">10dp</dimen>
+    <dimen name="cardview_horizontalmargin">20dp</dimen>
+    <dimen name="cardview_elevation">20dp</dimen>
+    <dimen name="cardview_cornerradius">5dp</dimen>
+    <dimen name="cardview_txvSize_description">22sp</dimen>
+
+    <dimen name="actionbar_txv_apptitle">30sp</dimen>
+    <dimen name="actionbar_linlayoutgeneral_padding">5dp</dimen>
+    <dimen name="actionbar_imvlogo_square">40dp</dimen>
+    <dimen name="actionbar_imgbtnmenu_square">30dp</dimen>
+
+
+    <dimen name="layout_padding">20dp</dimen>
+    <dimen name="img_square_icon">30dp</dimen>
+    <dimen name="imgButon_marginEnd">15dp</dimen>
+    <dimen name="imgIcon_marginStart">5dp</dimen>
+    <dimen name="actionbar_elevation">4dp</dimen>
+    <dimen name="recyclerview_mascotaslist_verticalmargin">10dp</dimen>
+
+    <dimen name="floatbtn_margin">40dp</dimen>
+
+
+
+
+</resources>

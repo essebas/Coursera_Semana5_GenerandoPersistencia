@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Servipet2</string>
+
+    <string name="txv_name">Nombre</string>
+    <string name="txv_countLikes">0</string>
+    <string name="img_contentDescription">Description</string>
+    <string name="recyclerView_txv_empty">No hay mascotas marcadas favoritas</string>
+    <string name="snackbar_favMessage">Fue añadido a favoritos</string>
+
+
+    <string name="pArrayListMascotasLike">pArrayListMascotasLike</string>
+
+
+
+</resources>

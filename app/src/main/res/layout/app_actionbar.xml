@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/actionbar_elevation"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/actionbar_linLayout_general"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="3"
+        android:padding="@dimen/actionbar_linlayoutgeneral_padding">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/actionbar_linLayout_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/actionbar_imv_logo"
+            android:layout_width="@dimen/actionbar_imvlogo_square"
+            android:layout_height="@dimen/actionbar_imvlogo_square"
+            android:src="@drawable/ic_dogpaw"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/actionbar_txv_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:textSize="@dimen/actionbar_txv_apptitle"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlanco"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/actionbar_linLayout_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/actionbar_txv_countlikes"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="0"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/colorBlanco"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_star"/>
+
+            <ImageButton
+                android:id="@+id/actionbar_imgBtn_menu"
+                android:layout_width="@dimen/actionbar_imgbtnmenu_square"
+                android:layout_height="@dimen/actionbar_imgbtnmenu_square"
+                android:background="@drawable/ic_menubar"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+</android.support.v7.widget.Toolbar>
