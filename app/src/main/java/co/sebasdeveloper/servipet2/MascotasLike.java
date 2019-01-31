@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import co.sebasdeveloper.servipet2.adapter.MascotasAdapter;
+import co.sebasdeveloper.servipet2.pojo.Mascota;
+
 public class MascotasLike extends AppCompatActivity {
 
     private ArrayList<Mascota> listMascotasLike;

@@ -6,4 +6,15 @@
     <color name="colorBlanco">#FFFF</color>
     <color name="titleText">#4d3e42</color>
     <color name="fondoOscuro">#484848</color>
+    <color name="colorPrimaryLight">#B3E5FC</color>
+
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+    <color name="colorLinkedin">#0288d1</color>
+    <color name="colorFacebook">#3f51b5</color>
+    <color name="colorTwitter">#03a9f4</color>
+    <color name="colorInstagram">#cd486b</color>
 </resources>

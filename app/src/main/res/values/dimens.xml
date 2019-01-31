@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- CardView Home -->
     <dimen name="cardview_image_heightSize">300dp</dimen>
     <dimen name="cardview_verticalmargin">10dp</dimen>
     <dimen name="cardview_horizontalmargin">20dp</dimen>
     <dimen name="cardview_elevation">20dp</dimen>
     <dimen name="cardview_cornerradius">5dp</dimen>
     <dimen name="cardview_txvSize_description">22sp</dimen>
+
+    <!-- CardView Profile / Galery -->
+    <dimen name="pcardview_image_heightSize">180dp</dimen>
+    <dimen name="pcardview_verticalmargin">5dp</dimen>
+    <dimen name="pcardview_horizontalmargin">10dp</dimen>
 
     <dimen name="actionbar_txv_apptitle">30sp</dimen>
     <dimen name="actionbar_linlayoutgeneral_padding">5dp</dimen>
@@ -24,6 +30,28 @@
     <dimen name="floatbtn_margin">40dp</dimen>
 
 
+    <dimen name="layout_vert">40dp</dimen>
+    <dimen name="layout_hori">20dp</dimen>
 
+    <dimen name="ic_edTxt_padding">10dp</dimen>
+    <dimen name="LinLayout_group_marginBotton">10dp</dimen>
+    <dimen name="txv_title_marginBotton">40dp</dimen>
+    <dimen name="txi_marginBottom">20dp</dimen>
+
+    <dimen name="txv_title_size">40sp</dimen>
+    <dimen name="txv_data_size">25sp</dimen>
+    <dimen name="btn_textSize_continue">20sp</dimen>
+    <dimen name="btn_padding">20dp</dimen>
+
+    <dimen name="txv_about_desciption">18sp</dimen>
+    <dimen name="txv_about_mail">20sp</dimen>
+
+    <dimen name="btnCircular_about">50dp</dimen>
+    <dimen name="btnCircular_marginRight">15dp</dimen>
+    <dimen name="imgCircular_size">200dp</dimen>
+    <dimen name="marginTop_layoutSocialMedia">25dp</dimen>
+    <dimen name="txv_marginBottom_text">5dp</dimen>
+
+    <dimen name="margin_about_separateSection">10dp</dimen>
 
 </resources>

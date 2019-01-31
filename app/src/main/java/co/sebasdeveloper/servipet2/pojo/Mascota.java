@@ -1,13 +1,24 @@
-package co.sebasdeveloper.servipet2;
+package co.sebasdeveloper.servipet2.pojo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Mascota implements Parcelable {
 
     private int idImage;
     private String nombre;
     private int countLikes;
+
+    //Actualizacion con la clase MascotaFoto
+    private ArrayList<MascotaFoto> galeria;
+
+    public Mascota(String nombre) {
+        this.nombre = nombre;
+    }
+    //Actualizacion con la clase MascotaFoto
 
     public Mascota(int idImage, String nombre, int countLikes) {
         this.idImage = idImage;
@@ -20,6 +31,7 @@ public class Mascota implements Parcelable {
         this.nombre = nombre;
         this.countLikes = 0;
     }
+
 
     protected Mascota(Parcel in) {
         idImage = in.readInt();
@@ -38,6 +50,14 @@ public class Mascota implements Parcelable {
             return new Mascota[size];
         }
     };
+
+    public ArrayList<MascotaFoto> getGaleria() {
+        return galeria;
+    }
+
+    public void setGaleria(ArrayList<MascotaFoto> galeria) {
+        this.galeria = galeria;
+    }
 
     public int getIdImage() {
         return idImage;

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutInfo">
+
+    <include
+        android:id="@+id/layout_actionBar"
+        layout="@layout/app_actionbar">
+    </include>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circulaimg_pet"
+        android:layout_width="@dimen/imgCircular_size"
+        android:layout_height="@dimen/imgCircular_size"
+        android:src="@drawable/developer"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_about_separateSection">
+    </com.mikhaellopez.circularimageview.CircularImageView>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linLayout_developerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_about_separateSection"
+        android:padding="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/txv_infoDevoloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/txv_about_developedInfo"
+            android:textSize="@dimen/txv_data_size"
+            android:layout_marginBottom="@dimen/margin_about_separateSection"/>
+
+        <TextView
+            android:id="@+id/txv_nameDevoloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/txv_about_developerName"
+            android:textSize="@dimen/cardview_txvSize_description" />
+        <TextView
+            android:id="@+id/txv_carrerDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/cardview_txvSize_description"
+            android:text="@string/txv_about_developerCarrer" />
+
+        <TextView
+            android:id="@+id/txv_mailDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txv_about_mail"
+            android:text="@string/txv_about_developerMail"
+            android:layout_marginBottom="@dimen/txv_marginBottom_text"/>
+
+        <TextView
+            android:id="@+id/txv_mailCelphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txv_about_desciption"
+            android:textAlignment="center"
+            android:text="@string/txv_about_developerDescription"
+            android:layout_marginBottom="@dimen/txv_marginBottom_text"/>
+
+        <TextView
+            android:id="@+id/txv_countryDeveloper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txv_about_mail"
+            android:text="@string/txv_about_developerCountry"
+            android:layout_marginBottom="@dimen/txv_marginBottom_text"/>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linLayout_socialMediaDeveloper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/marginTop_layoutSocialMedia">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn_facebookDeveloper"
+                android:layout_width="@dimen/btnCircular_about"
+                android:layout_height="@dimen/btnCircular_about"
+                android:src="@drawable/ic_facebook"
+                app:backgroundTint="@color/colorFacebook"
+                app:fabCustomSize="@dimen/btnCircular_about"
+                android:layout_marginRight="@dimen/btnCircular_marginRight"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn_linkedinDeveloper"
+                android:layout_width="@dimen/btnCircular_about"
+                android:layout_height="@dimen/btnCircular_about"
+                android:src="@drawable/ic_linkedin"
+                app:backgroundTint="@color/colorLinkedin"
+                app:fabCustomSize="@dimen/btnCircular_about"
+                android:layout_marginRight="@dimen/btnCircular_marginRight"/>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn_twitterDeveloper"
+                android:layout_width="@dimen/btnCircular_about"
+                android:layout_height="@dimen/btnCircular_about"
+                android:src="@drawable/ic_twitter"
+                app:backgroundTint="@color/colorTwitter"
+                app:fabCustomSize="@dimen/btnCircular_about"
+                android:layout_marginRight="@dimen/btnCircular_marginRight"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn_instagramDeveloper"
+                android:layout_width="@dimen/btnCircular_about"
+                android:layout_height="@dimen/btnCircular_about"
+                android:src="@drawable/ic_instagram_blank"
+                app:backgroundTint="@color/colorInstagram"
+                app:fabCustomSize="@dimen/btnCircular_about"/>
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

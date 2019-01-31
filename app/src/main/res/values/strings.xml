@@ -10,6 +10,42 @@
 
     <string name="pArrayListMascotasLike">pArrayListMascotasLike</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <!-- menus -->
+    <string name="mContact">Contacto</string>
+    <string name="mAbout">Acerca de</string>
+
+
+    <string name="am_txv_title">Contact</string>
+    <string name="adc_txv_title">Data Confirmation</string>
+
+    <string name="btn_send">Enviar</string>
+
+    <string name="txi_hint_name">Name</string>
+    <string name="txi_hint_date">Birthdate</string>
+    <string name="txi_hint_tel">Phone</string>
+    <string name="txi_hint_mail">Email</string>
+    <string name="txi_hint_message">Write your message</string>
+    <string name="txi_hint_resume">Contact Description</string>
+
+    <string name="txi_error_name">You need to enter a name</string>
+    <string name="txi_error_mail">You need to enter a mail</string>
+    <string name="txi_error_message">You need to enter a message</string>
+
+
+    <string name="snack_mailSending">Your email was sending successful</string>
+    <string name="mail_subject">, te ha contactado!</string>
+    <string name="snackBar_action">OK</string>
+
+
+    <string name="txv_about_developedInfo">Developed by:</string>
+    <string name="txv_about_developerName">Diego Sebastian Camargo Lopez</string>
+    <string name="txv_about_developerCarrer">Ingeniero de Sistemas</string>
+    <string name="txv_about_developerMail">sebas.camargo81@gmail.com</string>
+    <string name="txv_about_developerDescription">Soy un desarrollador independiente, que busca capacitarse y estar a la vanguardia de las nuevas tecnologias.</string>
+    <string name="txv_about_developerCountry">Bogotá, Colombia</string>
 
 </resources>

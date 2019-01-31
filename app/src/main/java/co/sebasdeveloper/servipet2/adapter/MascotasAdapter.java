@@ -1,4 +1,4 @@
-package co.sebasdeveloper.servipet2;
+package co.sebasdeveloper.servipet2.adapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -13,6 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import co.sebasdeveloper.servipet2.MainActivity;
+import co.sebasdeveloper.servipet2.fragment.ViewPetsFragment;
+import co.sebasdeveloper.servipet2.pojo.Mascota;
+import co.sebasdeveloper.servipet2.R;
 
 public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.Mascotas_ViewHolder>{
 
@@ -56,7 +61,7 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.Mascot
                     //Esto solo hara una simulacion del cambio del texto del TextView para que se vea e like agregado.
                     txvCountLikes.setText(""+mascotaExtraida.getCountLikes());
                     mascotasLike.add(mascotaExtraida);
-                    MainActivity.setCountLikes(mascotasLike.size(),mascotaExtraida);
+                    ViewPetsFragment.setCountLikes(mascotasLike.size(),mascotaExtraida);
                 }else {
                     Toast.makeText(activity, "Ya te gusta " + mascotaExtraida.getNombre(), Toast.LENGTH_SHORT).show();
                 }

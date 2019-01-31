@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfilePetFragment">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linLayout_general"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/circulaimg_pet"
+            android:layout_width="@dimen/imgCircular_size"
+            android:layout_height="@dimen/imgCircular_size"
+            android:src="@drawable/dog11"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+        </com.mikhaellopez.circularimageview.CircularImageView>
+
+        <TextView
+            android:id="@+id/txv_petname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textStyle="bold"
+            android:textSize="@dimen/txv_data_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/layRecycler_miMascotaList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/recyclerview_mascotaslist_verticalmargin"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/actionbar_txv_countlikes"
+        android:icon="@drawable/ic_star"
+        android:titleCondensed="sw"
+        android:title="5"
+        android:orderInCategory="102"
+        app:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/mContext_contact"
+        android:title="@string/mContact"
+        android:orderInCategory="100">
+    </item>
+
+    <item
+        android:id="@+id/mContext_about"
+        android:title="@string/mAbout"
+        android:orderInCategory="101">
+    </item>
+
+</menu>

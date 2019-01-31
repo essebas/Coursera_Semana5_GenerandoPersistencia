@@ -2,84 +2,83 @@ package co.sebasdeveloper.servipet2;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import co.sebasdeveloper.servipet2.adapter.MascotasAdapter;
+import co.sebasdeveloper.servipet2.adapter.PageAdapter;
+import co.sebasdeveloper.servipet2.fragment.ProfilePetFragment;
+import co.sebasdeveloper.servipet2.fragment.ViewPetsFragment;
+import co.sebasdeveloper.servipet2.pojo.Mascota;
+
 public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton floatActionCamera;
-    private static ArrayList<Mascota> listMascotasLike;
-    private ArrayList<Mascota> listaMAscotas;
     private Toolbar toolbar;
-    private RecyclerView mascotasRecyclerView;
-    private MascotasAdapter mascotasAdapter;
-    private static TextView txvCountLikes;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.layout_actionBar);
-        setSupportActionBar(toolbar);
-        listMascotasLike = new ArrayList<>();
-        mascotasRecyclerView = (RecyclerView) findViewById(R.id.layRecycler_mascotasList);
-        txvCountLikes = (TextView)findViewById(R.id.actionbar_txv_countlikes);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mascotasRecyclerView.setLayoutManager(linearLayoutManager);
-
-        txvCountLikes.setOnClickListener(new View.OnClickListener() {
+        tabLayout = (TabLayout) findViewById(R.id.toolbar_tab1);
+        viewPager = (ViewPager) findViewById(R.id.viewPager_general);
+        setUpViewPager();
+        if(toolbar != null){
+            setSupportActionBar(toolbar);
+        }
+        /*txvCountLikes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,MascotasLike.class);
+                Intent i = new Intent(MainActivity.class,MascotasLike.class);
                 i.putExtra(getResources().getString(R.string.pArrayListMascotasLike), listMascotasLike);
                 startActivity(i);
             }
-        });
+        });*/
 
         addFloatingButton();
-        cargarLista();
-        inicializarAdaptador();
-
     }
 
-    public static void setCountLikes(int i, Mascota m){
-        try {
-            txvCountLikes.setText(""+i);
-            listMascotasLike.add(m);
-        }catch (Exception ex){
-            Log.d("Exception", "" + ex.getMessage());
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i;
+        switch (item.getItemId()){
+            case R.id.mContext_contact:
+                //Toast.makeText(this, "Abierto contacto", Toast.LENGTH_SHORT).show();
+                i = new Intent(MainActivity.this, ContactForm.class);
+                startActivity(i);
+                break;
+            case R.id.mContext_about:
+                //Toast.makeText(this, "Abierto acerca de", Toast.LENGTH_SHORT).show();
+                i = new Intent(MainActivity.this, AboutInfo.class);
+                startActivity(i);
+                break;
+            default:
         }
-    }
-
-    private void inicializarAdaptador(){
-        mascotasAdapter = new MascotasAdapter(listaMAscotas,this);
-        mascotasRecyclerView.setAdapter(mascotasAdapter);
-    }
-
-
-    private void cargarLista(){
-        listaMAscotas = new ArrayList<>();
-        listaMAscotas.add(new Mascota(R.drawable.dog1,"Jeronimo"));
-        listaMAscotas.add(new Mascota(R.drawable.dog2,"Max", 1));
-        listaMAscotas.add(new Mascota(R.drawable.dog3,"Luna"));
-        listaMAscotas.add(new Mascota(R.drawable.dog4,"Anais", 5));
-        listaMAscotas.add(new Mascota(R.drawable.dog5,"Guffias"));
-        listaMAscotas.add(new Mascota(R.drawable.dog6,"Tobie", 3));
-        listaMAscotas.add(new Mascota(R.drawable.dog7,"Bella"));
-        listaMAscotas.add(new Mascota(R.drawable.dog8,"Jacob", 16));
-        listaMAscotas.add(new Mascota(R.drawable.dog9,"Estrella", 56));
-        listaMAscotas.add(new Mascota(R.drawable.dog10,"Mat", 8));
+        return super.onOptionsItemSelected(item);
     }
 
     public void addFloatingButton(){
@@ -91,4 +90,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public ArrayList<Fragment> agragarFragments(){
+        ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
+        fragmentArrayList.add(new ViewPetsFragment());
+        fragmentArrayList.add(new ProfilePetFragment());
+        return fragmentArrayList;
+    }
+
+    public void setUpViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agragarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_doghouse);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_dogprofile);
+    }
+
 }
