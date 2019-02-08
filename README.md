@@ -5,7 +5,7 @@ Este desarrollo es hecho por Diego Sebastian Camargo Lopez, Bogotà, Colombia.
 
 ##Para poder comprender como estan relacionados los datos para su correcta visualizacion en la app, se adjunta el siguiente modelo relacional para su debido analisis.
 
-![alt text](https://github.com/essebas/Coursera_Semana4_MenusFragments/blob/master/img/DiagramaRelacional.png)
+![alt text](https://github.com/essebas/Coursera_Semana5_GenerandoPersistencia/blob/master/img/DiagramaRelacional.png)
 
 ## 1. Vista principal, general:
 
