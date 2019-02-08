@@ -27,8 +27,8 @@ import co.sebasdeveloper.servipet2.R;
 public class SimpleMail extends AsyncTask<String,Void,String> {
 
     private static final String SMTP_HOST_NAME = "smtp.gmail.com";
-    private static final String SMTP_AUTH_USER = "example@gmail.com";// Put your email address
-    private static final String SMTP_AUTH_PASS = "1234"; // Put your email password
+    private static final String SMTP_AUTH_USER = "sebas.camargo81@gmail.com";// Put your email address
+    private static final String SMTP_AUTH_PASS = "c4m4rg097"; // Put your email password
 
     private static Message message;
 

@@ -7,23 +7,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import co.sebasdeveloper.servipet2.adapter.MascotasAdapter;
+import co.sebasdeveloper.servipet2.activity.view.MascotasLike;
 import co.sebasdeveloper.servipet2.adapter.PageAdapter;
 import co.sebasdeveloper.servipet2.fragment.ProfilePetFragment;
 import co.sebasdeveloper.servipet2.fragment.ViewPetsFragment;
-import co.sebasdeveloper.servipet2.pojo.Mascota;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mContext_about:
                 //Toast.makeText(this, "Abierto acerca de", Toast.LENGTH_SHORT).show();
                 i = new Intent(MainActivity.this, AboutInfo.class);
+                startActivity(i);
+                break;
+            case R.id.actionbar_txv_countlikes:
+                i = new Intent(MainActivity.this, MascotasLike.class);
                 startActivity(i);
                 break;
             default:

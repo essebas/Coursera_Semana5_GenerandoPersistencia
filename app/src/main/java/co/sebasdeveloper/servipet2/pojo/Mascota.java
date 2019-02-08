@@ -8,8 +8,10 @@ import java.util.ArrayList;
 
 public class Mascota implements Parcelable {
 
-    private int idImage;
+    private int id;
     private String nombre;
+
+    private int idImage;
     private int countLikes;
 
     //Actualizacion con la clase MascotaFoto
@@ -37,6 +39,10 @@ public class Mascota implements Parcelable {
         idImage = in.readInt();
         nombre = in.readString();
         countLikes = in.readInt();
+    }
+
+    public Mascota() {
+        this.galeria = new ArrayList<>();
     }
 
     public static final Creator<Mascota> CREATOR = new Creator<Mascota>() {
@@ -87,6 +93,14 @@ public class Mascota implements Parcelable {
         this.countLikes = this.countLikes + 1 ;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -98,4 +112,9 @@ public class Mascota implements Parcelable {
         dest.writeString(nombre);
         dest.writeInt(countLikes);
     }
+
+    public void addFoto(MascotaFoto mascotaFoto){
+        galeria.add(mascotaFoto);
+    }
+
 }

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import co.sebasdeveloper.servipet2.MainActivity;
+import co.sebasdeveloper.servipet2.db.ConstructorMascota;
 import co.sebasdeveloper.servipet2.fragment.ViewPetsFragment;
 import co.sebasdeveloper.servipet2.pojo.Mascota;
 import co.sebasdeveloper.servipet2.R;
@@ -47,9 +48,12 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.Mascot
         //Aqui es donde recorremos el array de objetos y vamos capturando uno por uno, para que todas las variables del objetos sean puestas en su respectivo view.
         final Mascota mascotaExtraida = mascotas.get(i);
         final TextView txvCountLikes = mascotas_viewHolder.txvCountLikes;
-        mascotas_viewHolder.imvMascotaPicture.setImageResource(mascotaExtraida.getIdImage());
+        if(!mascotaExtraida.getGaleria().isEmpty()){
+            mascotas_viewHolder.imvMascotaPicture.setImageResource(mascotaExtraida.getGaleria().get(0).getIdFoto());
+        }
         mascotas_viewHolder.txvNombre.setText(mascotaExtraida.getNombre());
-        txvCountLikes.setText(""+mascotaExtraida.getCountLikes());
+        final ConstructorMascota constructorMascota = new ConstructorMascota(activity);
+        txvCountLikes.setText(String.valueOf(constructorMascota.getCountLikes(mascotaExtraida.getGaleria().get(0))));
 
         mascotas_viewHolder.imgBtnLike.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,11 +61,15 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.Mascot
                 if(!mascotasLike.contains(mascotaExtraida)){
                     //Toast.makeText(activity, mascotaExtraida.getNombre() + " fue añadido a favoritos", Toast.LENGTH_SHORT).show();
                     Snackbar.make(v,R.string.snackbar_favMessage, Snackbar.LENGTH_SHORT).show();
-                    mascotaExtraida.simulacionLike();
+                    if(!mascotaExtraida.getGaleria().isEmpty()){
+                        constructorMascota.putLikeContacto(mascotaExtraida.getGaleria().get(0));
+                        txvCountLikes.setText(String.valueOf(constructorMascota.getCountLikes(mascotaExtraida.getGaleria().get(0))));
+                    }
+                    //mascotaExtraida.simulacionLike();
                     //Esto solo hara una simulacion del cambio del texto del TextView para que se vea e like agregado.
-                    txvCountLikes.setText(""+mascotaExtraida.getCountLikes());
-                    mascotasLike.add(mascotaExtraida);
-                    ViewPetsFragment.setCountLikes(mascotasLike.size(),mascotaExtraida);
+                    //txvCountLikes.setText(""+mascotaExtraida.getCountLikes());
+                    //mascotasLike.add(mascotaExtraida);
+                    //ViewPetsFragment.setCountLikes(mascotasLike.size(),mascotaExtraida); ANTES
                 }else {
                     Toast.makeText(activity, "Ya te gusta " + mascotaExtraida.getNombre(), Toast.LENGTH_SHORT).show();
                 }

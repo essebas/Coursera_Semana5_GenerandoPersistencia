@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MascotasLike"
+            android:name=".activity.view.MascotasLike"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ContactForm"
